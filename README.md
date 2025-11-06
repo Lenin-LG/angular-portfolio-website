@@ -1,59 +1,177 @@
-# Portfolio
+# 🎬 Learning another language project  — Android Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+This repository contains the **Android mobile frontend** of the **Learning Another Language** microservices ecosystem, developed with **Kotlin** and based on **Clean Architecture**, **Hilt (DI)** and **Retrofit** for communication with RESTful APIs.
 
-## Development server
+The app allows the user to authenticate using **Keycloak**, consume the different microservices (Movies, Music, Notes, Speaking, Reports) and manage their content from a modern and modular interface.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## 🚀Main features
+
+* 🔐 **JWT Authentication with Keycloak**
+* 🎧 **Media Playback** with `Media3 (ExoPlayer)`
+* 📝 **Notes and Notebook Management**
+* 🗣️ **Speaking Practice** with Speech Recognition
+* 🎥 **Movie and Music Management** with Multipart Support
+* ⚙️ **Hilt** for Dependency Injection
+* 🌐 **Retrofit + OkHttp** for HTTP Communication
+* 🧭 **Navigation Component** with SafeArgs
+* 💾 **ViewBinding and LiveData** for Reactive UI
+
+---
+
+## 🧩 Estructura general del proyecto
+
+```
+app/
+├── activitys/
+│   ├── AuthActivity.kt
+│   ├── HomeActivity.kt
+│   ├── MovieActivity.kt
+│   ├── MusicActivity.kt
+│   ├── NotebookActivity.kt
+│   ├── TopicActivity.kt
+│   ├── PhraseActivity.kt
+│   ├── SpeakingActivity.kt
+│   ├── AdminActivity.kt
+│   ├── UploadMovieActivity.kt
+│   └── UploadMusicActivity.kt
+│
+├── backend/
+│   ├── Notes/
+│   ├── Movie/
+│   ├── Music/
+│   ├── Speaking/
+│   └── Report/
+│
+├── utils/
+│   ├── SessionManager.kt
+│   ├── TokenInterceptor.kt
+│   └── Helpers.kt
+│
+└── res/
+    ├── layout/
+    ├── drawable/
+    └── values/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Technology stack
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Technology | Usage |
+| ---------------------------------- | -------------------------- |
+| **Kotlin 2.0.21** | Main language |
+| **Android Gradle Plugin 8.10.1** | Build system |
+| **Hilt 2.48** | Dependency injection |
+| **Retrofit 2.9.0 + OkHttp 4.10.0** | REST API |
+| **Navigation 2.7.7** | Fragment navigation |
+| **Media3 1.3.1 (ExoPlayer)** | Media playback |
+| **Glide 4.16.0** | Image loading |
+| **Lifecycle (2.7.0)** | ViewModel and LiveData |
+| **Material Components 1.12.0** | Modern UI |
+| **ConstraintLayout 2.2.1** | Flexible layout |
+---
 
-```bash
-ng generate component component-name
-```
+## ⚙️ Project setup
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Requirements
 
-```bash
-ng generate --help
-```
+* Android Studio Ladybug or higher
+* JDK 17+
+* Android device or emulator with **SDK 24+**
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Installation
 
 ```bash
-ng test
+git clone https://github.com/tuusuario/learning-another-language-frontend.git
+cd learning-another-language-frontend
 ```
 
-## Running end-to-end tests
+Open with Android Studio and sync Gradle.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
+## 📦 Version Catalog (`libs.versions.toml`)
+
+Example of versions and dependencies used:
+
+```toml
+[versions]
+agp = "8.10.1"
+kotlin = "2.0.21"
+coreKtx = "1.16.0"
+appcompat = "1.7.1"
+material = "1.12.0"
+retrofit = "2.9.0"
+okhttp = "4.10.0"
+hilt = "2.48"
+navigation = "2.7.7"
+lifecycle = "2.7.0"
+media3 = "1.3.1"
+glide = "4.16.0"
+# ... demás versiones
+
+[libraries]
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+google-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+androidx-media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "media3" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+# ... other dependencies
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 🔑 Authentication and Token
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Access to microservices is done using **JWT tokens** generated by **Keycloak**.
+The `SessionManager` automatically stores and refreshes the tokens, while the `TokenInterceptor` adds the `Authorization: Bearer <token>` to all HTTP requests.
+
+```kotlin
+SessionManager(this).fetchAccessToken()
+```
+
+---
+
+## 🔐 Network Security
+
+The `network_security_config.xml` file allows HTTP connections to a specific domain for local testing or development environments:
+
+```xml
+<domain-config cleartextTrafficPermitted="true">
+<domain includeSubdomains="true">10.0.2.2</domain>
+</domain-config>
+```
+
+> 🧠 **Recommendation:**
+>
+> * In production, change the domain to your **official API (HTTPS)**.
+> * For test environments, you can leave it as the local IP or staging server.
+---
+
+## ▶️ Execution
+
+1. Open the project in Android Studio
+2. Connect an emulator or physical device
+3. Run it with the **Run ▶️** button
+
+The app will start in an `AuthActivity`, where the user can log in or register.
+After logging in, the app will access a `HomeActivity`, which allows you to navigate to the music, movies, notes, and speaking modules.
+---
+
+## 🧑‍💻 Author
+
+**✍️Lenin Laura Garcia**
+Backend Developer | Spring Boot + Kotlin + AWS
+📍 Lima, Perú
+
+---
+
+## 🏁 License
+
+Project for academic and professional development use.
+© 2025 All rights reserved.
+
+

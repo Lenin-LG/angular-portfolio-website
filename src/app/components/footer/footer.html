@@ -1,0 +1,28 @@
+<footer class="bg-[#0d0d0d] text-center py-6 text-gray-500 text-sm flex flex-col items-center gap-3">
+  <!-- Redes sociales -->
+  <div class="flex justify-center gap-6 text-xl">
+    <a href="https://github.com/Lenin-LG" target="_blank" aria-label="GitHub"
+       class="text-gray-400 hover:text-white transition">
+      <i class="devicon-github-original"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/lenin-laura-garcia-873a49310/" target="_blank" aria-label="LinkedIn"
+       class="text-gray-400 hover:text-blue-500 transition">
+      <i class="devicon-linkedin-plain"></i>
+    </a>
+
+    <a href="mailto:tu_correo@gmail.com" aria-label="Email"
+       class="text-gray-400 hover:text-red-400 transition">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
+
+  <!-- Texto traducible -->
+  <p>
+    © {{ currentYear }} Lenin Laura — {{ 'footer.role' | translate }}
+  </p>
+
+  <p class="text-xs text-gray-600">
+    {{ 'footer.rights' | translate }}
+  </p>
+</footer>

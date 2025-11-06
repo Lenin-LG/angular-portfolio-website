@@ -1,0 +1,72 @@
+{
+  "HERO": {
+    "TITLE": "Hola, soy",
+    "DESCRIPTION": "Desarrollador Backend con pasión por crear sistemas eficientes y escalables.",
+    "BUTTON": "Ver mis proyectos"
+  },
+  "ABOUT": {
+    "TITLE": "Sobre mí",
+    "P1": "Soy un desarrollador backend enfocado en la creación de sistemas escalables con Java, Spring Boot y bases de datos SQL. Me apasiona diseñar arquitecturas limpias, implementar microservicios y optimizar el rendimiento de las aplicaciones.",
+    "P2": "He trabajado en proyectos que integran autenticación con Keycloak, almacenamiento en AWS S3 y despliegue con Docker y EC2. Además, desarrollo proyectos en Android (Kotlin) y Angular, lo que me permite conciliar mejor el flujo entre frontend y backend, y comprender de forma integral las necesidades de ambos lados.",
+    "P3": "Actualmente continúo ampliando mis conocimientos en Kubernetes y arquitectura de microservicios en la nube, mientras desarrollo proyectos personales para mi portafolio."
+  },
+ "SKILLS": {
+    "TITLE": "⚙️ Stack Tecnológico",
+    "BACKEND": "🧠 Backend",
+    "FRONTEND": "📱 Frontend & Mobile",
+    "CLOUD": "☁️ Cloud & DevOps",
+    "DATABASES": "🗄️ Bases de Datos",
+    "TOOLS": "🧩 Herramientas"
+ },
+ "PROJECTS": {
+    "TITLE": "🚀 Proyectos Destacados",
+    "CLINIC_BACKEND": {
+      "TITLE": "🏥 Clinic Management – Backend",
+      "DESCRIPTION": "API REST para gestión clínica, desarrollada en <span class='text-primary'>Spring Boot</span> con autenticación JWT, Docker Compose, tests y despliegue en <span class='text-primary'>AWS EC2/RDS</span>.",
+      "BUTTON": "Ver código →"
+    },
+    "CLINIC_FRONTEND": {
+      "TITLE": "💻 Clinic Management – Frontend",
+      "DESCRIPTION": "Aplicación web en <span class='text-primary'>Angular</span> que consume la API del backend usando <span class='text-primary'>HttpClient</span> y un diseño responsivo con Bootstrap.",
+      "BUTTON": "Ver código →"
+    },
+    "LANGVERSE_BACKEND": {
+      "TITLE": "☁️ Langverse – Backend",
+      "DESCRIPTION": "Backend basado en microservicios con <span class='text-primary'>Spring Boot</span>, <span class='text-primary'>Keycloak</span> y <span class='text-primary'>AWS S3/EC2</span>. Sigue principios de <span class='text-primary'>Arquitectura Limpia</span> y se ejecuta con Docker Compose.",
+      "BUTTON": "Ver código →"
+    },
+    "LANGVERSE_ANDROID": {
+      "TITLE": "📱 Langverse – Android",
+      "DESCRIPTION": "App Android creada con <span class='text-primary'>Kotlin</span>, <span class='text-primary'>MVVM</span>, <span class='text-primary'>Hilt</span> y <span class='text-primary'>Retrofit</span> para consumir APIs seguras con JWT.",
+      "BUTTON": "Ver código →"
+    },
+    "NEXT_PROJECT": {
+      "TITLE": "🎨 Sistema de Gestión de Decoraciones – Próximo Proyecto",
+      "DESCRIPTION": "Plataforma para empresas de decoración con personalización de productos, notificaciones, seguridad avanzada, transferencias y un bot IA basado en RAG para atención al cliente.",
+      "BUTTON": "Ver más detalles",
+      "MODAL": {
+        "TITLE": "🎨 Sistema de Gestión de Decoraciones – Próximo Proyecto",
+        "STACK": "Backend: <span class='text-primary'>Spring Boot, Microservicios, Kafka, Lambda, IA RAG</span><br>Frontend: <span class='text-primary'>Angular Web + iOS App</span><br>Infraestructura: <span class='text-primary'>Kubernetes, Grafana, AWS</span>",
+        "DIAGRAM_LOGIC": "Diagramas de Modelo Lógico",
+        "DIAGRAM_USECASE": "Diagramas de Caso de Uso",
+        "NOTE": "Este proyecto todavía está en planificación y desarrollo inicial. Refleja la arquitectura y tecnologías que planeo implementar, mostrando el diseño UML, flujo de usuarios, seguridad y funcionalidades de IA."
+      }
+    }
+  },
+    "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Quieres colaborar o tienes un proyecto en mente?",
+    "name": "Tu nombre",
+    "email": "Tu correo",
+    "message": "Tu mensaje",
+    "send": "Enviar mensaje ✉️",
+    "sending": "⏳ Enviando mensaje...",
+    "success": "✅ ¡Mensaje enviado con éxito!",
+    "error": "❌ Ocurrió un error al enviar el mensaje"
+  },
+    "footer": {
+    "role": "Desarrollador Backend",
+    "rights": "Todos los derechos reservados."
+  }
+ 
+}

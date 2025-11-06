@@ -1,0 +1,38 @@
+<section class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden">
+
+  <!-- Partículas de fondo -->
+  <div id="particles" class="absolute inset-0 -z-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-transparent blur-3xl"></div>
+
+  <!-- Selector de idioma -->
+  <div class="absolute top-6 right-6 z-20">
+    <button
+      (click)="changeLanguage('es')"
+      [class.opacity-100]="currentLang === 'es'"
+      [class.opacity-50]="currentLang !== 'es'"
+      class="text-white font-semibold mx-1 hover:opacity-100 transition">
+      🇪🇸 ES
+    </button>
+    <button
+      (click)="changeLanguage('en')"
+      [class.opacity-100]="currentLang === 'en'"
+      [class.opacity-50]="currentLang !== 'en'"
+      class="text-white font-semibold mx-1 hover:opacity-100 transition">
+      🇺🇸 EN
+    </button>
+  </div>
+
+  <!-- Contenido principal traducido -->
+  <h1 class="text-6xl font-bold mb-4 relative z-10 text-white drop-shadow-[0_0_10px_rgba(30,144,255,0.3)]">
+    {{ 'HERO.TITLE' | translate }} <span class="text-primary">Lenin Laura Garcia</span>
+  </h1>
+
+  <p class="text-gray-400 text-lg mb-6 relative z-10" data-aos="fade-up">
+    {{ 'HERO.DESCRIPTION' | translate }}
+  </p>
+
+  <a href="#projects"
+     class="relative z-10 bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-600 transition hover:shadow-[0_0_20px_rgba(30,144,255,0.6)]">
+     {{ 'HERO.BUTTON' | translate }} 🚀
+  </a>
+</section>

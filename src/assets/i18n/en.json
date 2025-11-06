@@ -1,0 +1,72 @@
+{
+  "HERO": {
+    "TITLE": "Hi, I'm",
+    "DESCRIPTION": "Backend Developer passionate about building efficient and scalable systems.",
+    "BUTTON": "View my projects"
+  },
+  "ABOUT": {
+    "TITLE": "About Me",
+    "P1": "I am a backend developer focused on building scalable systems using Java, Spring Boot, and SQL databases. I’m passionate about designing clean architectures, implementing microservices, and optimizing application performance.",
+    "P2": "I have worked on projects involving authentication with Keycloak, storage with AWS S3, and deployment using Docker and EC2. I also develop Android (Kotlin) and Angular projects, which helps me understand both frontend and backend needs.",
+    "P3": "I’m currently expanding my knowledge in Kubernetes and cloud-based microservice architecture while developing personal projects for my portfolio."
+  },
+  "SKILLS": {
+    "TITLE": "⚙️ Tech Stack",
+    "BACKEND": "🧠 Backend",
+    "FRONTEND": "📱 Frontend & Mobile",
+    "CLOUD": "☁️ Cloud & DevOps",
+    "DATABASES": "🗄️ Databases",
+    "TOOLS": "🧩 Tools"
+  },
+   "PROJECTS": {
+    "TITLE": "🚀 Featured Projects",
+    "CLINIC_BACKEND": {
+      "TITLE": "🏥 Clinic Management – Backend",
+      "DESCRIPTION": "REST API for clinic management, built with <span class='text-primary'>Spring Boot</span>, JWT authentication, Docker Compose, tests, and deployed on <span class='text-primary'>AWS EC2/RDS</span>.",
+      "BUTTON": "View code →"
+    },
+    "CLINIC_FRONTEND": {
+      "TITLE": "💻 Clinic Management – Frontend",
+      "DESCRIPTION": "Web app built with <span class='text-primary'>Angular</span> consuming the backend API using <span class='text-primary'>HttpClient</span> and a responsive design with Bootstrap.",
+      "BUTTON": "View code →"
+    },
+    "LANGVERSE_BACKEND": {
+      "TITLE": "☁️ Langverse – Backend",
+      "DESCRIPTION": "Microservice-based backend built with <span class='text-primary'>Spring Boot</span>, <span class='text-primary'>Keycloak</span>, and <span class='text-primary'>AWS S3/EC2</span>. Follows <span class='text-primary'>Clean Architecture</span> principles and runs with Docker Compose.",
+      "BUTTON": "View code →"
+    },
+    "LANGVERSE_ANDROID": {
+      "TITLE": "📱 Langverse – Android",
+      "DESCRIPTION": "Android app built with <span class='text-primary'>Kotlin</span>, <span class='text-primary'>MVVM</span>, <span class='text-primary'>Hilt</span>, and <span class='text-primary'>Retrofit</span> to consume secured JWT APIs.",
+      "BUTTON": "View code →"
+    },
+    "NEXT_PROJECT": {
+      "TITLE": "🎨 Decoration Management System – Upcoming Project",
+      "DESCRIPTION": "Platform for decoration businesses with product customization, notifications, advanced security, transfers, and an AI chatbot powered by RAG for customer support.",
+      "BUTTON": "View more details",
+      "MODAL": {
+        "TITLE": "🎨 Decoration Management System – Upcoming Project",
+        "STACK": "Backend: <span class='text-primary'>Spring Boot, Microservices, Kafka, Lambda, AI RAG</span><br>Frontend: <span class='text-primary'>Angular Web + iOS App</span><br>Infrastructure: <span class='text-primary'>Kubernetes, Grafana, AWS</span>",
+        "DIAGRAM_LOGIC": "Logical Model Diagrams",
+        "DIAGRAM_USECASE": "Use Case Diagrams",
+        "NOTE": "This project is still in the planning and early development stage. It showcases the architecture and technologies I plan to implement, including UML design, user flow, security, and AI features."
+      }
+    }
+  },
+    "contact": {
+    "title": "Contact",
+    "subtitle": "Want to collaborate or have a project in mind?",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send message ✉️",
+    "sending": "⏳ Sending message...",
+    "success": "✅ Message sent successfully!",
+    "error": "❌ An error occurred while sending your message"
+  },
+    "footer": {
+    "role": "Backend Developer",
+    "rights": "All rights reserved."
+  }
+  
+}

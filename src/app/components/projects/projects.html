@@ -1,0 +1,108 @@
+<section id="projects" class="py-20 bg-[#111] text-center">
+  <h2 class="text-3xl font-bold text-primary mb-6">
+    {{ 'PROJECTS.TITLE' | translate }}
+  </h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-10">
+
+    <!-- Clinic Backend -->
+    <div data-aos="fade-up" class="bg-dark p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
+      <h3 class="text-xl font-semibold mb-2 text-white">
+        {{ 'PROJECTS.CLINIC_BACKEND.TITLE' | translate }}
+      </h3>
+      <p class="text-gray-400 text-sm mb-3" [innerHTML]="'PROJECTS.CLINIC_BACKEND.DESCRIPTION' | translate"></p>
+      <a href="https://github.com/Lenin-LG/clinic-management-backend"
+         target="_blank"
+         class="text-primary hover:underline">
+         {{ 'PROJECTS.CLINIC_BACKEND.BUTTON' | translate }}
+      </a>
+    </div>
+
+    <!-- Clinic Frontend -->
+    <div data-aos="fade-up" data-aos-delay="100" class="bg-dark p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
+      <h3 class="text-xl font-semibold mb-2 text-white">
+        {{ 'PROJECTS.CLINIC_FRONTEND.TITLE' | translate }}
+      </h3>
+      <p class="text-gray-400 text-sm mb-3" [innerHTML]="'PROJECTS.CLINIC_FRONTEND.DESCRIPTION' | translate"></p>
+      <a href="https://github.com/Lenin-LG/clinic-management-frontend"
+         target="_blank"
+         class="text-primary hover:underline">
+         {{ 'PROJECTS.CLINIC_FRONTEND.BUTTON' | translate }}
+      </a>
+    </div>
+
+    <!-- Langverse Backend -->
+    <div data-aos="fade-up" data-aos-delay="200" class="bg-dark p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
+      <h3 class="text-xl font-semibold mb-2 text-white">
+        {{ 'PROJECTS.LANGVERSE_BACKEND.TITLE' | translate }}
+      </h3>
+      <p class="text-gray-400 text-sm mb-3" [innerHTML]="'PROJECTS.LANGVERSE_BACKEND.DESCRIPTION' | translate"></p>
+      <a href="https://github.com/Lenin-LG/langverse-backend"
+         target="_blank"
+         class="text-primary hover:underline">
+         {{ 'PROJECTS.LANGVERSE_BACKEND.BUTTON' | translate }}
+      </a>
+    </div>
+
+    <!-- Langverse Android -->
+    <div data-aos="fade-up" data-aos-delay="300" class="bg-dark p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
+      <h3 class="text-xl font-semibold mb-2 text-white">
+        {{ 'PROJECTS.LANGVERSE_ANDROID.TITLE' | translate }}
+      </h3>
+      <p class="text-gray-400 text-sm mb-3" [innerHTML]="'PROJECTS.LANGVERSE_ANDROID.DESCRIPTION' | translate"></p>
+      <a href="https://github.com/Lenin-LG/langverse-frontend"
+         target="_blank"
+         class="text-primary hover:underline">
+         {{ 'PROJECTS.LANGVERSE_ANDROID.BUTTON' | translate }}
+      </a>
+    </div>
+
+    <!-- Próximo proyecto -->
+    <div data-aos="fade-up" data-aos-delay="400" class="bg-dark p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-xl font-semibold mb-2 text-white">
+        {{ 'PROJECTS.NEXT_PROJECT.TITLE' | translate }}
+      </h3>
+      <p class="text-gray-400 text-sm mb-3" [innerHTML]="'PROJECTS.NEXT_PROJECT.DESCRIPTION' | translate"></p>
+
+      <!-- Botón para abrir modal -->
+      <button class="bg-primary text-white px-4 py-2 rounded-full mt-2 hover:bg-blue-600 transition"
+              (click)="showModal = true">
+        {{ 'PROJECTS.NEXT_PROJECT.BUTTON' | translate }}
+      </button>
+    </div>
+
+    <!-- Modal -->
+    <div *ngIf="showModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+      <div class="bg-[#111] text-white p-6 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative shadow-lg">
+        <!-- Botón cerrar -->
+        <button (click)="showModal = false"
+                class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+
+        <h3 class="text-2xl font-bold mb-4">
+          {{ 'PROJECTS.NEXT_PROJECT.MODAL.TITLE' | translate }}
+        </h3>
+
+        <p class="text-gray-400 mb-4" [innerHTML]="'PROJECTS.NEXT_PROJECT.MODAL.STACK' | translate"></p>
+
+        <h4 class="text-xl font-semibold mb-2">
+          {{ 'PROJECTS.NEXT_PROJECT.MODAL.DIAGRAM_LOGIC' | translate }}
+        </h4>
+        <div class="w-full">
+          <img src="assets/diagram.jpg" alt="diagram" class="w-full h-auto rounded shadow-md object-cover">
+        </div>
+
+        <h4 class="text-xl font-semibold mb-2">
+          {{ 'PROJECTS.NEXT_PROJECT.MODAL.DIAGRAM_USECASE' | translate }}
+        </h4>
+        <div class="w-full">
+          <img src="assets/diagramUseCase.jpg" alt="usecase" class="w-full h-auto rounded shadow-md object-cover">
+        </div>
+
+        <p class="text-gray-400 mt-4">
+          {{ 'PROJECTS.NEXT_PROJECT.MODAL.NOTE' | translate }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
